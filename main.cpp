@@ -1,3 +1,14 @@
+/***********************************************************************************************************************
+* Author : Zachary Pringle                                                                                             *
+* Program : hw5                                                                                                        *
+* Date Created : December 6, 2021                                                                                      *
+* Date Last Modified : December 9, 2021                                                                                *
+* Usage : No command line arguments                                                                                    *
+*                                                                                                                      *
+* Problem:                                                                                                             *
+*-Write the csv file to the link list                                                                                  *
+*- Create a link list that can add nodes to the head, display the list, search in the list, and delete the head pointer*
+***********************************************************************************************************************/
 #include <iostream>
 #include <fstream>
 #include <sstream>
