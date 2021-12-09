@@ -5,10 +5,14 @@
 #include <iostream>
 #include "listtoolshb.h"
 using namespace std;
+
+//inserts a data into a new head pointer that points to the old head pointer
 template<class T>
 void MyList<T>::insertHead(T theData) {
     head = new Node<T>(theData, head);
 }
+
+//displays the contents of the list by searching temp till it hits the last link which is NULL
 template <class T>
 void MyList<T>:: display() {
     Node<T>*temp=head;
@@ -19,6 +23,7 @@ void MyList<T>:: display() {
     }
 }
 
+//deletes the head pointer and sets the new head to the link the head was pointing to
 template<class T>
 T MyList<T>::deleteHead() {
     Node<T> *discard;
@@ -27,10 +32,13 @@ T MyList<T>::deleteHead() {
     return discard->getData();
 }
 
+//searches the list till it finds either the target data or NULL if data is there it returns true
+// if not it returns false
 template<class T>
 bool MyList<T>:: search(T& target) {
     Node<T>* here = head;
     if (here == NULL)  {
+        cout << "Not Found\n____________________________________________\n" << endl;
         return false;
     }
     else {
@@ -41,7 +49,7 @@ bool MyList<T>:: search(T& target) {
             return true;
         }
         else{
-            cout << "Not Found"<<endl;
+            cout << "Not Found\n____________________________________________\n"<<endl;
             return false;
         }
     }

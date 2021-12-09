@@ -6,6 +6,8 @@
 #define LISTTOOLS_H
 #include <iostream>
 using namespace std;
+
+//node class used to hold contents of the members of MyList
 template< class T >
 class Node{
 public:
@@ -20,6 +22,7 @@ private:
     Node<T> *link;
 };
 
+//holds nodes in a list and performs the functions defined in the .cpp
 template< class T >
 class MyList{
 public:
@@ -31,7 +34,5 @@ public:
 private:
     Node<T> *head;
 };
-
-template<class T> Node<T>* search(Node<T>* head, const T& target);
 
 #endif //LISTTOOLS_H
