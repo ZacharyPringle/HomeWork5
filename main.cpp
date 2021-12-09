@@ -37,11 +37,13 @@ int main() {
         }
     }
     pMyList.display();
+    cout << "\n____________________________________________\n" << endl;
     Profile p1;
     p1.fullname = "John Tyler";
     Profile target=p1;
     pMyList.search(target);
     pMyList.deleteHead();
+    pMyList.display();
 
 return 0;
 }

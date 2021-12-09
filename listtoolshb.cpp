@@ -12,7 +12,7 @@ void MyList<T>::insertHead(T theData) {
 template <class T>
 void MyList<T>:: display() {
     Node<T>*temp=head;
-    while(head!=NULL)
+    while(temp!=NULL)
     {
         cout<<temp->getData()<<endl;
         temp = temp->getLink();
@@ -24,7 +24,7 @@ T MyList<T>::deleteHead() {
     Node<T> *discard;
     discard = head;
     head = head->getLink();
-    delete discard;
+    return discard->getData();
 }
 
 template<class T>
@@ -37,11 +37,11 @@ bool MyList<T>:: search(T& target) {
         while (here->getData( ) != target && here->getLink( ) != NULL)
             here = here->getLink( );
         if (here->getData( ) == target){
-            cout << "True";
+            cout << "Found\n____________________________________________\n" << endl;
             return true;
         }
         else{
-            cout << "False";
+            cout << "Not Found"<<endl;
             return false;
         }
     }
